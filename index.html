@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#6d28d9" />
+  <meta name="description" content="CRM offline para músicos e produtores venderem shows." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>GIGGER CRM</title>
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><span>GIGGER</span><small>CRM PARA SHOWS</small></div>
+      <nav>
+        <button class="nav active" data-page="dashboard">▣ <span>Painel</span></button>
+        <button class="nav" data-page="contractors">♟ <span>Contratantes</span></button>
+        <button class="nav" data-page="opportunities">◫ <span>Oportunidades</span></button>
+        <button class="nav" data-page="agenda">□ <span>Agenda</span></button>
+        <button class="nav" data-page="reports">▤ <span>Relatórios</span></button>
+        <button class="nav" data-page="settings">⚙ <span>Configurações</span></button>
+      </nav>
+      <div class="plan-card"><b id="planName">PLANO FREE</b><p id="planUsage">0/10 contratantes<br>0/10 oportunidades abertas</p><button id="openPro" class="outline">Desbloquear Pro</button></div>
+    </aside>
+    <main class="content">
+      <header><button id="menuButton" class="mobile-menu">☰</button><div><h1 id="pageTitle">Painel</h1><p id="pageSub">Organize suas negociações de shows.</p></div><button id="installButton" class="secondary hidden">Instalar app</button></header>
+      <section id="page"></section>
+    </main>
+  </div>
+  <dialog id="modal"><form method="dialog" id="modalForm"><header class="modal-head"><h2 id="modalTitle"></h2><button value="cancel" class="icon">×</button></header><div id="modalContent"></div><footer><button value="cancel" class="secondary">Cancelar</button><button id="modalSave" value="default" class="primary">Salvar</button></footer></form></dialog>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
